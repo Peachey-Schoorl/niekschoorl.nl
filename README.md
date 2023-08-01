@@ -1,2 +1,5 @@
-# niekschoorl.nl
-Website voor Niek. 😥 Goeie Reis. 🕊️
+# Niek Schoorl - In Memoriam
+
+[Goeie Reis](https://niekschoorl.nl). 🕊️
+
+![](assets/closing.jpg)

@@ -52,6 +52,7 @@ section {
   max-width: 35vw;
   min-height: 100vh;
   min-width: 20em;
+  line-height: 120%;
 }
 
 /*=======( Section Specific )=================================================*/

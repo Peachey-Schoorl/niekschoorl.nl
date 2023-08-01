@@ -48,9 +48,10 @@ img {
 section {
   font-family: font-regular, serif;
   font-size: 1.35em;
-  height: 100vh;
   margin: auto;
   max-width: 35vw;
+  min-height: 100vh;
+  min-width: 20em;
 }
 
 /*=======( Section Specific )=================================================*/

@@ -174,4 +174,12 @@ section {
   font-weight: normal;
 }
 
+/*=======( Mobile Tweaks )====================================================*/
+
+@media screen and (max-width: 27.5rem) {
+  body {font-size: 0.65em;}
+  section { width: auto;}
+}
+
+
 /********( End )***************************************************************/

@@ -7,6 +7,7 @@
       2.1.2 Image
     2.2 In Memoriam
     2.2.1 Title
+    2.2.2 Afscheid
     2.3 Rouwkaart
       2.3.1 Title
       2.3.2 Generic Content
@@ -15,6 +16,7 @@
       2.3.5 Family
     2.4 Closing
       2.4.1 Image
+      2.4.2 Image Text
  */
 /*=======( Generic Styles )===================================================*/
 a {
@@ -31,12 +33,6 @@ address::before {
   content: "Adres: ";
 }
 
-article {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 footer {
   text-align: center;
 }
@@ -48,11 +44,11 @@ img {
 section {
   font-family: font-regular, serif;
   font-size: 1.35em;
-  margin: auto;
-  max-width: 35vw;
-  min-height: 100vh;
-  min-width: 20em;
   line-height: 120%;
+  margin: auto;
+  min-height: 100vh;
+  width: 40rem;
+  padding: 1em;
 }
 
 /*=======( Section Specific )=================================================*/
@@ -81,7 +77,6 @@ section {
 .in-memoriam {
   color: #2067b7;
   font-size: 1.5em;
-  width: 35vw;
   text-align-last: center;
   text-align: justify;
 }
@@ -98,8 +93,14 @@ section {
   content: ":";
 }
 
+/*.......( Afscheid ).........................................................*/
+.afscheid {
+  padding: 0 1em;
+}
+
 /*-------( Rouwkaart )--------------------------------------------------------*/
 .rouw-kaart {
+  font-size: 1.5em;
   text-align-last: center;
   text-align: justify;
 }
@@ -145,13 +146,35 @@ section {
 
 /*-------( Closing )----------------------------------------------------------*/
 .closing {
-  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 /*.......( Image )............................................................*/
 .closing img {
-  max-height: 100vh;
-  max-width: 100vw;
+  position: absolute;
+  bottom: 0;
+}
+
+/*.......( Image Text ).......................................................*/
+.closing p {
+  bottom: 1em;
+  color: white;
+  font-family: font-bold, serif;
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.closing p span {
+  display: block;
+  font-size: 0.4em;
+  font-weight: normal;
 }
 
 /********( End )***************************************************************/

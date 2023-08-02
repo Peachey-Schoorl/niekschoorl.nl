@@ -34,6 +34,7 @@ address::before {
 
 footer {
   text-align: center;
+  margin: 4em auto 0;
 }
 
 img {
@@ -153,14 +154,10 @@ section {
 }
 
 /*-------( Image )------------------------------------------------------------*/
-.closing img {
-  position: absolute;
-  bottom: 0;
-}
 
 /*-------( Image Text )----------------------------------------------------...*/
 .closing p {
-  bottom: 1em;
+  top: 10em;
   color: white;
   font-family: font-bold, serif;
   font-size: 3em;

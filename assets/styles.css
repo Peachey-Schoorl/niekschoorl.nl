@@ -1,22 +1,21 @@
 /********( CSS Index )*********************************************************/
 /*
     1. Generic Styles
-    2. Section Specific
-    2.1 Opening
-      2.1.1 Quote
-      2.1.2 Image
-    2.2 In Memoriam
-    2.2.1 Title
-    2.2.2 Afscheid
-    2.3 Rouwkaart
-      2.3.1 Title
-      2.3.2 Generic Content
-      2.3.3 Dates and Family
-      2.3.4 Dates
-      2.3.5 Family
-    2.4 Closing
-      2.4.1 Image
-      2.4.2 Image Text
+    2. Opening
+      2.1. Quote
+      2.2. Image
+    3. Rouwkaart
+      3.1. Title
+      3.2. Generic Content
+      3.3. Dates and Family
+      3.4. Dates
+      3.5. Family
+    4. In Memoriam
+      4.1. Title
+      4.2. Afscheid
+    5. Closing
+      5.1. Image
+      5.2. Image Text
  */
 /*=======( Generic Styles )===================================================*/
 a {
@@ -51,29 +50,76 @@ section {
   padding: 1em;
 }
 
-/*=======( Section Specific )=================================================*/
-/*-------( Opening )----------------------------------------------------------*/
+/*=======( Opening )==========================================================*/
 .opening {
   text-align: center;
   color: #2067b7;
   font-size: 1.85em;
 }
 
-/*.......( Quote )............................................................*/
+/*-------( Quote )------------------------------------------------------------*/
 .opening blockquote {
   font-style: normal;
 }
+
 .opening blockquote footer {
   font-family: font-italic, serif;
 }
 
-/*.......( Image )............................................................*/
+/*-------( Image )------------------------------------------------------------*/
 .opening img {
   border-radius: 100%;
   width: 50vh;
 }
 
-/*-------( In Memoriam )------------------------------------------------------*/
+/*=======( Rouwkaart )========================================================*/
+.rouw-kaart {
+  font-size: 1.5em;
+  text-align-last: center;
+  text-align: justify;
+}
+
+/*-------( Title )------------------------------------------------------------*/
+.rouw-kaart h1 {
+  color: #2067b7;
+  font-size: 2.5em;
+  font-family: font-bold, serif;
+}
+
+/*-------( Generic Content )------------------------------------------------..*/
+.rouw-kaart .content {
+  text-align: left;
+  text-align-last: left;
+}
+
+/*-------( Dates and Family )------------------------------------------------.*/
+.rouw-kaart .dates,
+.rouw-kaart .familie {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+/*-------( Dates )------------------------------------------------------------*/
+.rouw-kaart .dates {
+  font-family: font-italic, serif;
+}
+
+.rouw-kaart .geboren::before {
+  content: "* ";
+}
+
+.rouw-kaart .overleden::before {
+  content: "† ";
+}
+
+/*-------( Family )--------------------------------------------------------...*/
+.rouw-kaart .familie {
+  font-weight: bold;
+  font-family: font-bold, serif;
+}
+
+/*=======( In Memoriam )======================================================*/
 .in-memoriam {
   color: #2067b7;
   font-size: 1.5em;
@@ -81,7 +127,7 @@ section {
   text-align: justify;
 }
 
-/*.......( Title )............................................................*/
+/*-------( Title )------------------------------------------------------------*/
 .in-memoriam h2 {
   font-size: inherit;
   font-weight: inherit;
@@ -93,58 +139,12 @@ section {
   content: ":";
 }
 
-/*.......( Afscheid ).........................................................*/
+/*-------( Afscheid )--------------------------------------------------------.*/
 .afscheid {
   padding: 0 1em;
 }
 
-/*-------( Rouwkaart )--------------------------------------------------------*/
-.rouw-kaart {
-  font-size: 1.5em;
-  text-align-last: center;
-  text-align: justify;
-}
-
-/*.......( Title )............................................................*/
-.rouw-kaart h1 {
-  color: #2067b7;
-  font-size: 2.5em;
-  font-family: font-bold, serif;
-}
-
-/*.......( Generic Content )..................................................*/
-.rouw-kaart .content {
-  text-align: left;
-  text-align-last: left;
-}
-
-/*.......( Dates and Family ).................................................*/
-.rouw-kaart .dates,
-.rouw-kaart .familie {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-}
-
-/*.......( Dates )............................................................*/
-.rouw-kaart .dates {
-  font-family: font-italic, serif;
-}
-.rouw-kaart .geboren::before {
-  content: "* ";
-}
-
-.rouw-kaart .overleden::before {
-  content: "† ";
-}
-
-/*.......( Family )...........................................................*/
-.rouw-kaart .familie {
-  font-weight: bold;
-  font-family: font-bold, serif;
-}
-
-/*-------( Closing )----------------------------------------------------------*/
+/*=======( Closing )==========================================================*/
 .closing {
   align-items: center;
   display: flex;
@@ -152,13 +152,13 @@ section {
   position: relative;
 }
 
-/*.......( Image )............................................................*/
+/*-------( Image )------------------------------------------------------------*/
 .closing img {
   position: absolute;
   bottom: 0;
 }
 
-/*.......( Image Text ).......................................................*/
+/*-------( Image Text )----------------------------------------------------...*/
 .closing p {
   bottom: 1em;
   color: white;
